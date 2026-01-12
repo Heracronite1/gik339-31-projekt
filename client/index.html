@@ -35,7 +35,7 @@
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="platform" class="mr-4 text-xl w-40">Platform</label>
             <select id="platform" class="bg-white text-slate-800 p-1 flex-1 rounded-md" name="platform" required>
-                <option value="" disabled>Select platform...</option>
+                <option value="" disabled selected>Select platform...</option>
                 <option value="pc">PC</option>
                 <option value="ps5">PlayStation 5</option>
                 <option value="xbox">Xbox Series</option>
@@ -65,5 +65,16 @@
     </main>
 
     <script src="script.js"></script>
+    <div id="feedbackModal" class="fixed inset-0 hidden items-center justify-center bg-black/60 p-4 z-50">
+      <div class="bg-slate-900 text-white rounded-lg p-5 w-full max-w-md">
+        <h2 id="feedbackTitle" class="text-xl font-semibold mb-2">Message</h2>
+
+        <p id="feedbackText" class="mb-4"></p>
+
+        <div class="text-right">
+          <button id="closeModal" class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300">OK</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
