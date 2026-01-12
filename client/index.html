@@ -15,26 +15,27 @@
     <main class="mt-10">
       <div class="w-[55rem] mx-auto mt-8 bg-white/25 p-3 rounded-lg">
         <form id="gameForm">
-           <input type="hidden" name="id" />
+           <input type="hidden" id="gameId" name="id" />
 
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="title" class="mr-4 text-xl w-40">Title</label>
-            <input class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="title" />
+            <input id="title" class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="title" required/>
           </div>
 
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="studio" class="mr-4 text-xl w-40">Studio</label>
-            <input class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="studio" />
+            <input id="studio" class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="studio" required/>
           </div>
 
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="genre" class="mr-4 text-xl w-40">Genre</label>
-            <input class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="genre" />
+            <input id="genre" class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="genre" required/>
           </div>
           
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="platform" class="mr-4 text-xl w-40">Platform</label>
-            <select class="bg-white text-slate-800 p-1 flex-1 rounded-md" name="platform">
+            <select id="platform" class="bg-white text-slate-800 p-1 flex-1 rounded-md" name="platform" required>
+                <option value="" disabled selected>Select platform...</option>
                 <option value="pc">PC</option>
                 <option value="ps5">PlayStation 5</option>
                 <option value="xbox">Xbox Series</option>
@@ -57,7 +58,7 @@
               Skicka
             </button>
           </div>
-          
+
         </form>
       </div>
       <div id="listContainer"></div>
