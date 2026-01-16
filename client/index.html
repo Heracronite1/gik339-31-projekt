@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,70 +8,106 @@
     <link rel="shortcut icon" href="#" />
     <title>Videogame Library</title>
   </head>
-  <body class="min-h-[100vh] bg-gradient-to-b from-slate-800 to-slate-700 text-white">
+  <body
+    class="min-h-[100vh] bg-gradient-to-b from-slate-800 to-slate-700 text-white"
+  >
     <header class="mt-10 text-center">
       <h1 class="text-3xl">Videogame Library</h1>
     </header>
     <main class="mt-10">
-      <div class="w-[55rem] mx-auto mt-8 bg-white/25 p-3 rounded-lg">
-        <form id="gameForm">
-           <input type="hidden" id="gameId" name="id" />
+      <div class="w-full max-w-100 mx-auto mt-8 bg-white/25 p-3 rounded-lg">
+        <form id="gameForm" class="max-h-screen max-w-screen">
+          <input type="hidden" id="gameId" name="id" />
 
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="title" class="mr-4 text-xl w-40">Title</label>
-            <input id="title" class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="title" required/>
+            <input
+              id="title"
+              class="text-slate-800 p-1 flex-1 rounded-md"
+              type="text"
+              name="title"
+              required
+            />
           </div>
 
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="studio" class="mr-4 text-xl w-40">Studio</label>
-            <input id="studio" class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="studio" required/>
+            <input
+              id="studio"
+              class="text-slate-800 p-1 flex-1 rounded-md"
+              type="text"
+              name="studio"
+              required
+            />
           </div>
 
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="genre" class="mr-4 text-xl w-40">Genre</label>
-            <input id="genre" class="text-slate-800 p-1 flex-1 rounded-md" type="text" name="genre" required/>
+            <input
+              id="genre"
+              class="text-slate-800 p-1 flex-1 rounded-md"
+              type="text"
+              name="genre"
+              required
+            />
           </div>
-          
+
           <div class="form-control my-4 mx-auto flex w-3/4 items-center">
             <label for="platform" class="mr-4 text-xl w-40">Platform</label>
-            <select id="platform" class="bg-white text-slate-800 p-1 flex-1 rounded-md" name="platform" required>
-                <option value="" disabled selected>Select platform...</option>
-                <option value="pc">PC</option>
-                <option value="ps5">PlayStation 5</option>
-                <option value="xbox">Xbox Series</option>
-                <option value="switch">Nintendo Switch</option>
-                <option value="mobile">Mobile</option>
+            <select
+              id="platform"
+              class="bg-white text-slate-800 p-1 flex-1 rounded-md"
+              name="platform"
+              required
+            >
+              <option value="" disabled selected>Select platform...</option>
+              <option value="pc">PC</option>
+              <option value="ps5">PlayStation 5</option>
+              <option value="xbox">Xbox Series</option>
+              <option value="switch">Nintendo Switch</option>
+              <option value="mobile">Mobile</option>
             </select>
           </div>
 
-          <div class="form-control my-4 mx-auto flex w-3/4 items-center justify-end gap-4">
+          <div
+            class="form-control my-4 mx-auto flex w-3/4 items-center justify-end gap-4"
+          >
             <button
               class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
               type="reset"
-              name="clearGameForm">
+              name="clearGameForm"
+            >
               Clear
             </button>
             <button
               class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
               type="submit"
-              name="submitGameForm">
+              name="submitGameForm"
+            >
               Submit
             </button>
           </div>
-
         </form>
       </div>
       <div id="listContainer"></div>
     </main>
 
-    <div id="feedbackModal" class="fixed inset-0 hidden items-center justify-center bg-black/60 p-4 z-50">
+    <div
+      id="feedbackModal"
+      class="fixed inset-0 hidden items-center justify-center bg-black/60 p-4 z-50"
+    >
       <div class="bg-slate-900 text-white rounded-lg p-5 w-full max-w-md">
         <h2 id="feedbackTitle" class="text-xl font-semibold mb-2">Message</h2>
 
         <p id="feedbackText" class="mb-4"></p>
 
         <div class="text-right">
-          <button id="closeModal" class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300">OK</button>
+          <button
+            id="closeModal"
+            class="px-4 py-1 bg-slate-200 text-slate-800 rounded-md hover:bg-slate-300"
+          >
+            OK
+          </button>
         </div>
       </div>
     </div>
